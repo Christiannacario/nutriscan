@@ -1,0 +1,148 @@
+:root{
+    --bgmain: #C3D3C6;
+    --drkcolor: #0A393F;
+    --drkgreen: #14CE63;
+    --ylwgreen: #66FF83;
+    --dwhite: #fff;
+}
+
+
+body{
+    font-family: sans-serif;
+    background-color: var(--bgmain);
+}
+
+
+
+.head-text{
+    color: var(--dwhite);
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+.nutrition-item {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ai-btn{
+    background-color: var(--drkcolor);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--dwhite);
+    position: relative;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.ai-btn:hover{
+    background-color: var(--drkgreen);
+    color: var(--drkcolor);
+}
+
+.high {
+    background-color: #4caf50; 
+}
+
+.moderate {
+    background-color: #ffeb3b; 
+}
+
+.low {
+    background-color: #f44336; 
+}
+
+/* #uploaded-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    background-color: #0A393F;
+    width: 100%;
+    height: 50px;
+}
+#output {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#uploaded-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+    animation: scanEffect 3s infinite linear;
+    filter: blur(2px);
+    display: block; 
+    margin: 0 auto; 
+}
+
+#submit-button {
+    margin-top: 20px;
+    font-size: 18px; 
+    width: 200px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.custom-file-input {
+    display: none;
+}
+
+.custom-file-label {
+    border: 2px dashed #3498db;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    color: #3498db;
+    margin-top: 20px;
+}
+
+.custom-file-label:hover {
+    background-color: #f2f2f2;
+}
+
+.custom-file-input:focus + .custom-file-label {
+    outline: 1px dotted #3498db;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+@keyframes scanEffect {
+0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: translateY(0);
+}
+5% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: translateY(-2%);
+}
+10%, 90% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: translateY(2%);
+}
+95%, 100% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(0);
+    filter: blur(0); 
+}
+}

@@ -1,0 +1,124 @@
+:root{
+    --bgmain: #C3D3C6;
+    --drkcolor: #0A393F;
+    --drkgreen: #14CE63;
+    --ylwgreen: #66FF83;
+    --dwhite: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: var(--bgmain);
+}
+
+.container{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.box1{
+    width: 350px;
+    height: 500px;
+    background-color: var(--drkcolor);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.content{
+    padding: 30px;
+    display: grid;
+}
+
+.content img{
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.content .nutriQuotes{
+    color: var(--dwhite);
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btnLearnMore{
+    background-color: var(--drkgreen);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--dwhite);
+    position: relative;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: transform.4s;
+}
+
+.btnLearnMore:hover{
+    transform: scale(1.1);
+}
+
+.box2{
+    width:370px;
+    height: 500px;
+    background-color: var(--ylwgreen);
+    border-radius: 20px;
+    padding:  0 10px;
+    position: relative;
+    left: -20px;
+    z-index: -1;
+}
+
+.content h2{
+    color: #111;
+    margin-bottom: 5px;
+}
+.content p{
+    color: var(--dwhite);
+}
+
+form{
+    display: grid;
+    margin-top: 110px;
+}
+
+form input{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    transition: 0.1ms;
+}
+
+form input:active{
+    border: none;
+    outline: none;
+}
+
+.btnSignIn{
+    background-color: var(--drkcolor);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--dwhite);
+    position: relative;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: transform.4s;
+}
+
+.btnSignIn:hover{
+    transform: scale(1.1);
+}

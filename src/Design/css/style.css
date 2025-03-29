@@ -1,0 +1,309 @@
+:root{
+    --bgmain: #C3D3C6;
+    --drkcolor: #0A393F;
+    --drkgreen: #14CE63;
+    --ylwgreen: #66FF83;
+    --dwhite: #fff;
+}
+
+
+body{
+    font-family: sans-serif;
+    background-color: var(--bgmain);
+}
+
+
+
+.head-text{
+    text-align: center;
+    color: var(--dwhite);
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.form-context{
+    display: grid;
+    width: 200px;
+    margin: 0 auto;
+}
+.nutrition-item {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ai-btn{
+    background-color: var(--drkcolor);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    color: var(--dwhite);
+    position: relative;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.ai-btn:hover{
+    background-color: var(--drkgreen);
+    color: var(--drkcolor);
+}
+
+.high {
+    background-color: #4caf50; /* Red */
+}
+
+.moderate {
+    background-color: #ffeb3b; /* Yellow */
+}
+
+.low {
+    background-color: #f44336; /* Green */
+}
+
+/* #uploaded-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#output {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#uploaded-image {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+    animation: scanEffect 3s infinite linear;
+    filter: blur(2px);
+}
+
+#submit-button {
+    margin-top: 20px;
+    font-size: 18px;
+    width: 200px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the file input */
+.custom-file-input {
+    display: none;
+}
+
+.custom-file-label {
+    text-align: center;
+    border: 2px dashed #3498db;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    color: #3498db;
+    margin-top: 20px;
+}
+
+.custom-file-label:hover {
+    background-color: #f2f2f2;
+}
+
+.custom-file-input:focus + .custom-file-label {
+    outline: 1px dotted #3498db;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+@keyframes scanEffect {
+0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: translateY(0);
+}
+5% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: translateY(-2%);
+}
+10%, 90% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: translateY(2%);
+}
+95%, 100% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(0);
+    filter: blur(0); /* Remove the blur effect */
+}
+}
+
+/* for login style */
+.form-container{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.form-div{
+    display: flex;
+    background-color: var(--ylwgreen);
+    padding: 20px;
+    width: 370px;
+    height: 400px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+.form-div2{
+    display: flex;
+    background-color: var(--drkcolor);
+    padding: 20px;
+    width: 430px;
+    height: 400px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 100px;
+    z-index: -1;
+    /* text-align: center; */
+}
+
+.content{
+    padding: 10px;
+    display: grid;
+    margin-right: 80px;
+    margin-bottom: 50px;
+}
+
+.content h2{
+    margin: 0;
+    font-size: 30px;
+    color: var(--dwhite);
+    text-align: center;
+}
+
+.content img{
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.content .nutriQuotes{
+    color: var(--dwhite);
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btnLearnMore{
+    background-color: var(--drkgreen);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--dwhite);
+    position: relative;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: transform.4s;
+}
+
+.btnLearnMore:hover{
+    transform: scale(1.1);
+}
+
+.form-header-text{
+    color: var(--dwhite);
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    top: 110px;
+}
+
+form{
+    display: grid;
+}
+
+form input{
+    border: none;
+    outline: none;
+}
+
+form input:active{
+    border: none;
+    outline: none;
+}
+
+form .email-div{
+    display: grid;
+    margin-bottom: 10px;
+}
+
+form .email-div label{
+    color: #fff;
+    margin: 10px 10px;
+}
+form .email-div input{
+    padding: 10px;
+    border-radius: 10px;
+}
+form .password-div{
+    margin-bottom: 10px;
+    display: grid;
+}
+
+form .password-div label{
+    color: #fff;
+    margin: 10px 10px;
+}
+form .password-div input{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form .btn-default{
+    text-decoration: none;
+    text-align: center;
+}
+form .btn-default:hover{
+    color: blue;
+}
+
+.btnSignIn{
+    background-color: var(--drkcolor);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--dwhite);
+    position: relative;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: transform.4s;
+}
+
+.btnSignIn:hover{
+    transform: scale(1.1);
+}
+
+.errors{
+    color: red;
+    font-size: 12px;
+}

@@ -1,0 +1,78 @@
+/* App.css */
+.imageToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    position: absolute;
+    left: 200px;
+    top: -170px;
+  }
+  
+  .profile-picture img {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+  }
+  
+  .sidebar {
+    position: relative;
+    top: 150px;
+    right: 50px;
+    width: 200px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .triangle-up {
+    width: 0;
+    height: 0;
+    border-left:20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid white;
+    position: relative;
+    top: -30px;
+}
+  
+  .sidebar-content {
+    text-align: center;
+  }
+  
+  .profile-info img {
+    border-radius: 50%;
+    width: 50px;
+  }
+  
+  .profile-info h2 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2em;
+  }
+  
+  .profile-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 
+  } 
+
+  .btnLogout{
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--drkgreen);
+    border: none;
+    padding: 5px 40px;
+    border-radius: 20px;
+    color: var(--dwhite);
+    position: relative;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: transform.4s;
+  }
