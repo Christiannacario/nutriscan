@@ -6,9 +6,9 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const USER_ID = 'clarifai';
 const APP_ID = 'main';
-const PAT = '5aecdb6bcae74d4e84aae2e974508af1';
+const PAT = process.env.API_PATH;
 const MODEL_ID = 'food-item-recognition';
-const MODEL_VERSION_ID = '1d5fd481e0cf4826aa72ec3ff049e044';
+const MODEL_VERSION_ID = process.env.API_MODEL_VERSION_ID;
 
 
 
